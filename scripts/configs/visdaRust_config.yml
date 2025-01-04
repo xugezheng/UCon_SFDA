@@ -1,0 +1,56 @@
+seed: 2019
+dset: VISDA-C
+max_epoch: 30
+interval: 30
+batch_size: 64
+net: resnet101
+net_mode: fbc
+list_name: image_list_imb
+
+expname: iclr_2025_formal 
+key_info: visdaRust_test  
+
+s_model: null 
+
+source: Tr
+target: Val
+
+root: /storage/sfda_lln_extend/DATASOURCE
+model_root: /notebooks/sfda_lln_extend/Models/shot
+output_dir: /notebooks/sfda_lln_extend/output/iclr_2025_formal
+log_dir: /notebooks/sfda_lln_extend/logs/iclr_2025_formal
+
+
+# lr
+lr_decay: False
+lr_decay_type: shot 
+lr_F_coef: 0.05
+lr_power: 0.75
+
+
+# ==========================================
+# ================= Loss ===================
+# ==========================================
+
+
+# --- CL ---
+K: 3
+alpha_decay: True
+beta: 5
+
+# --- CL_NEG_DC ---
+dc_loss_type: ce
+dc_coef_type: fixed # fixed or init_incons
+dc_coef: 0.5
+
+
+
+# --- CL_POS_PL ---
+partial_coef: 0.1
+partial_k_type: fixed # fixed or cal
+partial_k: 2
+tau_type: fixed # fixed or stat or cal
+sample_selection_R: 1.1
+
+# ------------ Evaluation ------------
+warmup_eval_iter_num: -1
