@@ -84,3 +84,8 @@ python train_target_UCon_SFDA.py \
 
 
 > Notes: The priority of the YAML configuration file is higher than command-line arguments.
+
+
+
+END of 20250102 review
+---
