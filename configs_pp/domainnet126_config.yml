@@ -1,0 +1,54 @@
+seed: 2019
+dset: domainnet
+max_epoch: 45
+interval: 45
+batch_size: 64
+net: resnet50
+net_mode: fbc
+list_name: image_list
+
+expname: iclr_2025_formal 
+key_info: domainnet126_test  
+
+s_model: null 
+
+source: c
+target: s
+
+root: /storage/sfda_lln_extend/DATASOURCE
+model_root: /notebooks/sfda_lln_extend/Models/partial_label
+output_dir: /notebooks/sfda_lln_extend/output/iclr_2025_formal
+log_dir: /notebooks/sfda_lln_extend/logs/iclr_2025_formal
+
+
+# lr
+lr_decay: True
+lr_decay_type: shot
+lr_F_coef: 0.1
+lr_power: 0.3
+
+
+# ==========================================
+# ================= Loss ===================
+# ==========================================
+
+
+# --- CL ---
+alpha_decay: True
+K: 2
+beta: 0.75
+
+# --- CL_NEG_DC ---
+dc_loss_type: ce
+dc_coef_type: fixed # fixed or init_incons
+dc_coef: 0.5
+
+# --- CL_POS_PL ---
+partial_coef: 0.1
+partial_k_type: fixed # fixed or cal
+partial_k: 2
+tau_type: fixed # fixed or stat or cal
+sample_selection_R: 1.1
+
+# ------------ Evaluation ------------
+warmup_eval_iter_num: 3

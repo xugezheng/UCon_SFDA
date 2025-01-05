@@ -1,0 +1,57 @@
+seed: 2019
+dset: office-home
+max_epoch: 45
+interval: 45
+batch_size: 64
+net: resnet50
+net_mode: fc
+list_name: image_list_nrc
+
+expname: iclr_2025_formal 
+key_info: oh_test  
+
+s_model: null 
+
+source: Ar
+target: Cl
+
+root: /storage/sfda_lln_extend/DATASOURCE
+model_root: /notebooks/sfda_lln_extend/Models/nrc
+output_dir: /notebooks/sfda_partial/output/iclr_2025_formal
+log_dir: /notebooks/sfda_partial/logs/iclr_2025_formal
+
+
+# lr
+lr_decay: True
+lr_decay_type: shot
+lr_F_coef: 0.5
+lr_power: 0.75
+
+
+
+# ==========================================
+# ================= Loss ===================
+# ==========================================
+
+
+# --- CL ---
+alpha_decay: False
+K: 3
+beta: 0.75 
+
+# --- CL_NEG_DC ---
+dc_loss_type: ce
+dc_coef_type: fixed # fixed or init_incons
+dc_coef: 0.5
+
+
+
+# --- CL_POS_PL ---
+partial_coef: 0.001
+partial_k_type: cal # fixed or cal
+partial_k: 2
+tau_type: stat # fixed or stat or cal
+sample_selection_R: 1.1
+
+# ------------ Evaluation ------------
+warmup_eval_iter_num: 10 

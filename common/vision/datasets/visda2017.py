@@ -37,10 +37,6 @@ class VisDA2017(ImageList):
         ("train", "train.tar", "http://csr.bu.edu/ftp/visda17/clf/train.tar"),
         ("validation", "validation.tar", "http://csr.bu.edu/ftp/visda17/clf/validation.tar")
     ]
-    # image_list = {
-    #     "Synthetic": "image_list/train.txt",
-    #     "Real": "image_list/validation.txt"
-    # }
     image_list = {
         "Tr": "image_list/train.txt",
         "Val": "image_list/validation.txt"
@@ -60,11 +56,6 @@ class VisDA2017(ImageList):
         assert task in self.image_list
         self.selected_list = self.list_dict[list_name]
         data_list_file = os.path.join(root, self.selected_list[task])
-
-        # if download:
-        #     list(map(lambda args: download_data(root, *args), self.download_list))
-        # else:
-        #     list(map(lambda file_name, _: check_exits(root, file_name), self.download_list))
 
         super(VisDA2017, self).__init__(root, VisDA2017.CLASSES, data_list_file=data_list_file, **kwargs)
 

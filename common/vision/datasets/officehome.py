@@ -63,42 +63,22 @@ class OfficeHome(ImageList):
             "https://cloud.tsinghua.edu.cn/f/dee961894cc64b1da1d7/?dl=1",
         ),
     ]
-    # image_list = {
-    #     "Ar": "image_list/Art.txt",
-    #     "Cl": "image_list/Clipart.txt",
-    #     "Pr": "image_list/Product.txt",
-    #     "Rw": "image_list/Real_World.txt",
-    # }
     image_list_nrc = {
         "Ar": "image_list_nrc/Art.txt",
         "Cl": "image_list_nrc/Clipart.txt",
         "Pr": "image_list_nrc/Product.txt",
         "Rw": "image_list_nrc/Real_World.txt",
     }
-    # image_list_nrc_partial = {
-    #     "Ar": "image_list_nrc_partial/Art.txt",
-    #     "Cl": "image_list_nrc_partial/Clipart.txt",
-    #     "Pr": "image_list_nrc_partial/Product.txt",
-    #     "Rw": "image_list_nrc_partial/Real_World.txt",
-    # }
     image_list_partial = {
         "Ar": "image_list_partial/Art.txt",
         "Cl": "image_list_partial/Clipart.txt",
         "Pr": "image_list_partial/Product.txt",
         "Rw": "image_list_partial/Real_World.txt",
     }
-    # image_list_nrc_partial2 = {
-    #     "Ar": "image_list_nrc_partial2/Art.txt",
-    #     "Cl": "image_list_nrc_partial2/Clipart.txt",
-    #     "Pr": "image_list_nrc_partial2/Product.txt",
-    #     "Rw": "image_list_nrc_partial2/Real_World.txt",
-    # }
     list_dict = {
-                # "image_list": image_list,
                  "image_list_nrc": image_list_nrc,
+                 "image_list": image_list_nrc,
                  "image_list_partial": image_list_partial,
-                #  "image_list_nrc_partial": image_list_nrc_partial,
-                #  "image_list_nrc_partial2": image_list_nrc_partial2,
                  }
     
     # CLASSES = ['Drill', 'Exit_Sign', 'Bottle', 'Glasses', 'Computer', 'File_Cabinet', 'Shelf', 'Toys', 'Sink',

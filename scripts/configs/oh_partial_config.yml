@@ -16,7 +16,7 @@ source: Ar
 target: Cl
 
 root: /storage/sfda_lln_extend/DATASOURCE
-model_root: /notebooks/sfda_lln_extend/Models/shot
+model_root: /notebooks/sfda_lln_extend/Models/specialCase
 output_dir: /notebooks/sfda_partial/output/iclr_2025_formal
 log_dir: /notebooks/sfda_partial/logs/iclr_2025_formal
 

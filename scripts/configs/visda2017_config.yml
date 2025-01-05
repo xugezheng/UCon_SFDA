@@ -16,7 +16,7 @@ source: Tr
 target: Val
 
 root: /storage/sfda_lln_extend/DATASOURCE
-model_root: /notebooks/sfda_lln_extend/Models/shot
+model_root: /notebooks/sfda_lln_extend/Models/generalDA
 output_dir: /notebooks/sfda_lln_extend/output/iclr_2025_formal
 log_dir: /notebooks/sfda_lln_extend/logs/iclr_2025_formal
 

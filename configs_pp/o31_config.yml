@@ -1,0 +1,54 @@
+seed: 2019
+dset: office
+max_epoch: 50
+interval: 15
+batch_size: 64
+net: resnet50
+net_mode: fc
+list_name: image_list
+
+expname: iclr_2025_formal 
+key_info: o31_test  
+
+s_model: null 
+
+source: webcam
+target: dslr
+
+root: /storage/sfda_lln_extend/DATASOURCE
+model_root: /notebooks/sfda_lln_extend/Models/aad
+output_dir: /notebooks/sfda_lln_extend/output/iclr_2025_formal
+log_dir: /notebooks/sfda_lln_extend/logs/iclr_2025_formal
+
+
+# lr
+lr_decay: False
+lr_decay_type: shot
+lr_F_coef: 0.1
+lr_power: 0.75
+
+
+# ==========================================
+# ================= Loss ===================
+# ==========================================
+
+
+# --- CL ---
+alpha_decay: True
+K: 3
+beta: 1
+
+# --- CL_NEG_DC ---
+dc_loss_type: ce
+dc_coef_type: fixed # fixed or init_incons
+dc_coef: 1.0
+
+# --- CL_POS_PL ---
+partial_coef: 0.05
+partial_k_type: fixed # fixed or cal
+partial_k: 2
+tau_type: fixed # fixed or stat or cal
+sample_selection_R: 1.3
+
+# ------------ Evaluation ------------
+warmup_eval_iter_num: 10 
