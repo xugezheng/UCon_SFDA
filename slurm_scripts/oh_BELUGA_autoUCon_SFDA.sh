@@ -64,7 +64,7 @@ python train_target_UCon_SFDA.py \
  --K 3 --alpha 1 --beta 0.75 --alpha_decay False \
  --dc_loss_type ce --dc_coef 0.5 --dc_temp 1.0 \
  --partial_coef 0.001 --partial_k 2 --sample_selection_R 1.1 \
- --data_aug_coef_type init_incons --partial_k_type cal --tau_type cal \
+ --dc_coef_type init_incons --partial_k_type cal --tau_type cal \
  --warmup_eval_iter_num 10 \
  --expname iclr_2025_formal \
  --key_info oh_autoUCon_sfda_cal
