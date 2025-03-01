@@ -1,6 +1,6 @@
 # Repo for UCon-SFDA
 
-This will be the official git repo for our paper "Revisiting Source-Free Domain Adaptation: a New Perspective via Uncertainty Control".
+This will be the official git repo for our 2025 ICLR paper "[Revisiting Source-Free Domain Adaptation: a New Perspective via Uncertainty Control](https://openreview.net/forum?id=nx9Z5Kva96&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2025%2FConference%2FAuthors%23your-submissions))".
 
 ---
 ## Get Started
@@ -86,6 +86,3 @@ python train_target_UCon_SFDA.py \
 > Notes: The priority of the YAML configuration file is higher than command-line arguments.
 
 
-
-END of 20250102 review
----
